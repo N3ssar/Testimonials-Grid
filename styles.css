@@ -1,0 +1,200 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(219, 29%, 14%);
+    padding: 20px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    font-size: 13px;
+}
+
+/* Container */
+.container {
+    display: grid;
+    gap: 1.8px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas:
+        'dan dan jon kira'
+        'jean pat pat kira';
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 20px;
+}
+
+/* Global Styles */
+article {
+    background: hsl(0, 0%, 100%);
+    padding: 1rem;
+    border-radius: .8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+div h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+}
+
+header img {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 15px;
+}
+
+header p.verified {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* Blockquote */
+blockquote p:last-child {
+    font-size: 1rem;
+    word-spacing: 2px;
+    text-wrap: wrap;
+    line-height: 1.5;
+    opacity: .5;
+}
+
+blockquote p:first-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Attribution */
+.attribution {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(263, 55%, 52%);
+}
+
+/* Testimonials Style */
+.testimonial__daniel {
+    grid-area: dan;
+    background-image: url('bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top 0 right 8rem;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+.testimonial__jonathan {
+    grid-area: jon;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.testimonial__Kira {
+    grid-area: kira;
+}
+
+.testimonial__jeanette {
+    grid-area: jean;
+}
+
+.testimonial__patrick {
+    grid-area: pat;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.testimonial__Kira h2,
+.testimonial__jeanette h2 {
+    color: hsl(217, 19%, 35%);
+}
+
+.testimonial__Kira img,
+.testimonial__jeanette img {
+    border: solid 2px hsl(217, 19%, 35%);
+}
+
+.testimonial__daniel img,
+.testimonial__jonathan img {
+    border: solid 2px hsl(0, 0%, 100%);
+}
+
+.testimonial__patrick img {
+    border: solid 2px hsl(263, 55%, 52%);
+}
+
+/* Footer Style */
+footer {
+    position: fixed;
+    bottom: 0;
+    border-top: solid 2px hsl(219, 29%, 14%);
+    color: hsl(219, 29%, 14%);
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'dan'
+            'jon'
+            'jean'
+            'pat'
+            'kira';
+        gap: 1rem;
+    }
+
+    body {
+        height: auto;
+        padding: auto;
+    }
+
+
+    article {
+        padding: 1rem;
+    }
+
+    header img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    header p.verified {
+        font-size: 0.8rem;
+    }
+
+    blockquote p:first-child {
+        font-size: 1.2rem;
+    }
+
+    blockquote p:last-child {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
